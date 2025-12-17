@@ -1,0 +1,215 @@
+/* Ensure the app takes up the full viewport height */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Light Mode (Default) */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+body.light-mode h1,
+body.light-mode h3,
+body.light-mode h4 {
+  color: #343a40;
+}
+
+body.light-mode .card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode textarea {
+  resize: none;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+body.light-mode .text-danger {
+  font-weight: bold;
+}
+
+body.light-mode .text-success {
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #212529;
+  color: #e9ecef;
+}
+
+body.dark-mode h1,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #e9ecef;
+}
+
+body.dark-mode .card {
+  background-color: #343a40;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode textarea {
+  resize: none;
+  background-color: #495057;
+  color: #e9ecef;
+  border-color: #6c757d;
+}
+
+/* Ensure all text inside the card is readable in dark mode */
+body.dark-mode .card .form-label,
+body.dark-mode .card .form-control,
+body.dark-mode .card .form-control::placeholder,
+body.dark-mode .card .form-text {
+  color: #e9ecef;
+}
+
+/* Ensure result text is white in dark mode */
+body.dark-mode .card .result-text {
+  color: #ffffff;
+}
+
+/* Ensure loading text in the card with text-center is white in dark mode */
+body.dark-mode .card.text-center p {
+  color: #ffffff !important;
+}
+
+body.dark-mode .text-danger {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+body.dark-mode .text-success {
+  font-weight: bold;
+  color: #51cf66;
+}
+
+body.dark-mode .form-control {
+  background-color: #495057;
+  color: #e9ecef;
+  border-color: #6c757d;
+}
+
+body.dark-mode .form-control:focus {
+  background-color: #495057;
+  color: #e9ecef;
+  border-color: #adb5bd;
+  box-shadow: 0 0 0 0.2rem rgba(173, 181, 189, 0.25);
+}
+
+body.dark-mode .text-muted {
+  color: #adb5bd !important;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #1c7ed6;
+  border-color: #1c7ed6;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #1567b4;
+  border-color: #1567b4;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+body.dark-mode .btn-outline-info {
+  color: #4dabf7;
+  border-color: #4dabf7;
+}
+
+body.dark-mode .btn-outline-info:hover {
+  background-color: #4dabf7;
+  color: #212529;
+}
+
+body.dark-mode .btn-outline-secondary {
+  color: #adb5bd;
+  border-color: #adb5bd;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #adb5bd;
+  color: #212529;
+}
+
+body.dark-mode .btn-outline-success {
+  color: #51cf66;
+  border-color: #51cf66;
+}
+
+body.dark-mode .btn-outline-success:hover {
+  background-color: #51cf66;
+  color: #212529;
+}
+
+body.dark-mode .btn-outline-danger {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+body.dark-mode .btn-outline-danger:hover {
+  background-color: #ff6b6b;
+  color: #212529;
+}
+
+body.dark-mode .alert-danger {
+  background-color: #842029;
+  color: #f8d7da;
+}
+
+body.dark-mode .alert-info {
+  background-color: #1c4966;
+  color: #a5d8ff;
+}
+
+body.dark-mode .spinner-border {
+  color: #adb5bd;
+}
+
+body.dark-mode .btn-success {
+  background-color: #2f9e44;
+  border-color: #2f9e44;
+}
+
+body.dark-mode .btn-success:hover {
+  background-color: #2b8a3e;
+  border-color: #2b8a3e;
+}
+
+/* Ensure modal text is readable in dark mode */
+body.dark-mode .modal-content {
+  background-color: #343a40;
+  color: #e9ecef;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-body,
+body.dark-mode .modal-footer {
+  border-color: #495057;
+}
+
+body.dark-mode .modal-title,
+body.dark-mode .modal-body,
+body.dark-mode .modal-body p,
+body.dark-mode .modal-body li {
+  color: #e9ecef;
+}
+
+body.dark-mode .modal-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
