@@ -13,8 +13,12 @@ print("Flask app initialized with CORS.")
 print("Loading tokenizer...")
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 print("Tokenizer loaded.")
+
 print("Loading model...")
-model = BertForSequenceClassification.from_pretrained('./results/checkpoint-best')
+# Use environment variable for model path, default to local checkpoint
+model_path = os.environ.get('MODEL_PATH', './results/checkpoint-best')
+print(f"Loading model from: {model_path}")
+model = BertForSequenceClassification.from_pretrained(model_path)
 print("Model loaded successfully.")
 
 @app.route('/')
@@ -66,6 +70,9 @@ def predict():
         'not_fraud_prob': not_fraud_prob
     })
 
+import os
+
 if __name__ == '__main__':
-    print("Starting Flask server on http://0.0.0.0:5000...", flush=True)
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    print(f"Starting Flask server on http://0.0.0.0:{port}...", flush=True)
+    app.run(host='0.0.0.0', port=port, debug=False)
